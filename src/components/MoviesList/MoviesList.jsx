@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const { VITE_API_URL } = import.meta.env;
+
 export default function MoviesList() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/movies");
+        const response = await axios.get(`${VITE_API_URL}/movies`);
         setMovies(response.data);
       } catch (error) {
         console.error("Error fetching movies:", error);
