@@ -1,0 +1,13 @@
+.conteiner {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.text {
+  margin-right: 5px;
+}
